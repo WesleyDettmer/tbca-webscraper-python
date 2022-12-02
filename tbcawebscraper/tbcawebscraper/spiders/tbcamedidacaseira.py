@@ -42,7 +42,8 @@ class TbcamedidacaseiraSpider(scrapy.Spider):
     start_urls = ['http://www.tbca.net.br/base-dados/composicao_alimentos.php?pagina=1&atuald=1']
  
     def parse(self, response):
-        for row in response.xpath('//*[@class="table table-striped"]//tbody/tr'):
+        rows = response.xpath('//*[@class="table table-striped"]//tbody/tr')
+        for row in rows:
             item = AlimentoItem()
             item["nome"] = self.remove_pontuacao(row.xpath('td[2]//text()').getall()),
 
@@ -53,9 +54,9 @@ class TbcamedidacaseiraSpider(scrapy.Spider):
                 request.meta['item'] = item
                 yield request
             
-            prox_page = response.xpath('//div[@id="block_2"]/a[contains(text(),"pr")]/@href')[0]
+            prox_page = response.xpath('//div[@id="block_2"]/a[contains(text(),"pr")]/@href').extract_first()
             if prox_page is not None:
-                yield response.follow(prox_page, callback=self.parse, dont_filter = True)
+                yield response.follow(prox_page, callback=self.parse)
 
 
     def parse_alimento(self, response):
