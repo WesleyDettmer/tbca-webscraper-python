@@ -77,55 +77,55 @@ class TbcamedidacaseiraSpider(scrapy.Spider):
                     item['lipidios'] = row.xpath('td[3]//text()').extract_first()
                 case 7 :
                     item['fibraAlimentar'] = row.xpath('td[3]//text()').extract_first()
-                case 8 :
-                    item['colesterol'] = row.xpath('td[3]//text()').extract_first()
-                case 9 :
-                    item['acidosGraxosSaturados'] = row.xpath('td[3]//text()').extract_first()
                 case 10 :
-                    item['acidosGraxosMonoInsaturados'] = row.xpath('td[3]//text()').extract_first()
+                    item['colesterol'] = row.xpath('td[3]//text()').extract_first()
                 case 11 :
-                    item['acidosGraxosPoliInsaturados'] = row.xpath('td[3]//text()').extract_first()
+                    item['acidosGraxosSaturados'] = row.xpath('td[3]//text()').extract_first()
                 case 12 :
-                    item['acidosGraxosTrans'] = row.xpath('td[3]//text()').extract_first()
+                    item['acidosGraxosMonoInsaturados'] = row.xpath('td[3]//text()').extract_first()
                 case 13 :
-                    item['calcio'] = row.xpath('td[3]//text()').extract_first()
+                    item['acidosGraxosPoliInsaturados'] = row.xpath('td[3]//text()').extract_first()
                 case 14 :
-                    item['ferro'] = row.xpath('td[3]//text()').extract_first()
+                    item['acidosGraxosTrans'] = row.xpath('td[3]//text()').extract_first()
                 case 15 :
-                    item['sodio'] = row.xpath('td[3]//text()').extract_first()
+                    item['calcio'] = row.xpath('td[3]//text()').extract_first()
                 case 16 :
-                    item['magnesio'] = row.xpath('td[3]//text()').extract_first()
+                    item['ferro'] = row.xpath('td[3]//text()').extract_first()
                 case 17 :
-                    item['fosforo'] = row.xpath('td[3]//text()').extract_first()
+                    item['sodio'] = row.xpath('td[3]//text()').extract_first()
                 case 18 :
-                    item['potassio'] = row.xpath('td[3]//text()').extract_first()
+                    item['magnesio'] = row.xpath('td[3]//text()').extract_first()
                 case 19 :
-                    item['zinco'] = row.xpath('td[3]//text()').extract_first()
+                    item['fosforo'] = row.xpath('td[3]//text()').extract_first()
                 case 20 :
-                    item['cobre'] = row.xpath('td[3]//text()').extract_first()
+                    item['potassio'] = row.xpath('td[3]//text()').extract_first()
                 case 21 :
-                    item['selenio'] = row.xpath('td[3]//text()').extract_first()
+                    item['zinco'] = row.xpath('td[3]//text()').extract_first()
                 case 22 :
-                    item['vitaminaARE'] = row.xpath('td[3]//text()').extract_first()
+                    item['cobre'] = row.xpath('td[3]//text()').extract_first()
                 case 23 :
-                    item['vitaminaARAE'] = row.xpath('td[3]//text()').extract_first()
+                    item['selenio'] = row.xpath('td[3]//text()').extract_first()
                 case 24 :
-                    item['vitaminaD'] = row.xpath('td[3]//text()').extract_first()
+                    item['vitaminaARE'] = row.xpath('td[3]//text()').extract_first()
                 case 25 :
-                    item['vitaminaE'] = row.xpath('td[3]//text()').extract_first()
+                    item['vitaminaARAE'] = row.xpath('td[3]//text()').extract_first()
                 case 26 :
-                    item['tiamina'] = row.xpath('td[3]//text()').extract_first()
+                    item['vitaminaD'] = row.xpath('td[3]//text()').extract_first()
                 case 27 :
-                    item['riboflavina'] = row.xpath('td[3]//text()').extract_first()
+                    item['vitaminaE'] = row.xpath('td[3]//text()').extract_first()
                 case 28 :
-                    item['niacina'] = row.xpath('td[3]//text()').extract_first()
+                    item['tiamina'] = row.xpath('td[3]//text()').extract_first()
                 case 29 :
-                    item['vitaminaB6'] = row.xpath('td[3]//text()').extract_first()
+                    item['riboflavina'] = row.xpath('td[3]//text()').extract_first()
                 case 30 :
-                    item['vitaminaB12'] = row.xpath('td[3]//text()').extract_first()
+                    item['niacina'] = row.xpath('td[3]//text()').extract_first()
                 case 31 :
-                    item['vitaminaC'] = row.xpath('td[3]//text()').extract_first()
+                    item['vitaminaB6'] = row.xpath('td[3]//text()').extract_first()
                 case 32 :
+                    item['vitaminaB12'] = row.xpath('td[3]//text()').extract_first()
+                case 33 :
+                    item['vitaminaC'] = row.xpath('td[3]//text()').extract_first()
+                case 34 :
                     item['equivalenteFolato'] = row.xpath('td[3]//text()').extract_first()
         yield item
 
